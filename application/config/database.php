@@ -1,6 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+$url = parse_url(getenv('DATABASE_URL'));
+$host = $url['host']??null;
+$username = $url['user']??null;
+$password = $url['pass']??null;
+$database = substr($url['path'], 1);
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -73,12 +79,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'quanlisim',
+	'hostname' => $url["host"],
+	'username' => $url["user"],
+	'password' => $url["pass"],
+	'database' => substr($url["path"], 1),
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
