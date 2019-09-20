@@ -15,6 +15,12 @@ class ShowData_model extends CI_Model{
         $inf = $inf->result_array();
         return $inf;
     }
+
+    public function delData_model($id){
+        $this->db->where('id',$id);
+        return $this->db->delete('thongtin');
+        
+    }
 }
 
 ?>

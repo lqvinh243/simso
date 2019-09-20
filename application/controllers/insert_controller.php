@@ -19,7 +19,7 @@ class insert_controller extends CI_Controller{
         $price =  $this->input->post('price');
         
         $this->load->model('insert_Datamodel');
-        if($this->insert_Datamodel->insert($email,$number,$price) == 0){
+        if($this->insert_Datamodel->insert($email,$number,$price)){
             $this->load->view('insert_successfully');
         }
         else echo "404 not found".$this->insert_Datamodel->insert($email,$number,$price);

@@ -8,13 +8,15 @@ defined('BASEPATH') or exit('No script access allowed');
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<script type="text/javascript" src="<?php echo base_url() ?>vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="<?php echo base_url() ?>js/bootstrap.js"></script>
  	<script type="text/javascript" src="<?php echo base_url() ?>1.js"></script>
-	<link rel="stylesheet" href="<?php echo base_url() ?>vendor/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/bootstrap.css">
 	<link rel="stylesheet" href="<?php echo base_url() ?>vendor/font-awesome.css">
  	<link rel="stylesheet" href="<?php echo base_url() ?>1.css">
 </head>
+<?php require('narbar.php') ?>
 <body>
+	
 	<div class="container">
 		<div class="content card">
 			<h1 class="card-header">Wellcome!</h1>
@@ -49,7 +51,7 @@ defined('BASEPATH') or exit('No script access allowed');
 					<div class="card col-md-3 mx-auto" style="max-width:19rem">
 						<div class="cardheader border-dark mb-2 mt-1 ">
 							<div class="row">
-								<a href="index.php/insert_controller/" class="mx-auto d-block">Thêm số đẹp </a>
+								<a href="<?php base_url()?>index/insert_controller/" class="mx-auto d-block">Thêm số đẹp </a>
 							</div>
 						</div>
 						<div class="card-body">
