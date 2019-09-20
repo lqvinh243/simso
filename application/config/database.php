@@ -1,12 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
-$url = parse_url(getenv('DATABASE_URL'));
-$host = $url['host']??null;
-$username = $url['user']??null;
-$password = $url['pass']??null;
-$database = substr($url['path'], 1);
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -79,15 +73,13 @@ $database = substr($url['path'], 1);
 $active_group = 'default';
 $query_builder = TRUE;
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $url["host"],
-	'username' => $url["user"],
-	'password' => $url["pass"],
-	'database' => substr($url["path"], 1),
-	'dbdriver' => 'mysqli',
+	'hostname' => 'ec2-50-19-254-63.compute-1.amazonaws.com',
+	'username' => 'amlqpwlwnxburu',
+	'password' => '44a95aced0635887ab7b8e32ef26f19f73afe0c08cd3124ca91a03a9f34d7094',
+	'database' => 'db8jvdk9v9uufv',
+	'dbdriver' => 'pgsql',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
