@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No script access allowed');
 					<div class="card col-md-3 mx-auto" style="max-width:19rem">
 						<div class="cardheader border-dark mb-2 mt-1 ">
 							<div class="row">
-								<a href="/insert_controller/" class="mx-auto d-block">Thêm số đẹp </a>
+								<a href="<?php base_url() ?>index.php/insert_controller/" class="mx-auto d-block">Thêm số đẹp </a>
 							</div>
 						</div>
 						<div class="card-body">
@@ -37,7 +37,7 @@ defined('BASEPATH') or exit('No script access allowed');
 					<div class="card col-md-3 mx-auto" style="max-width:19rem">
 						<div class="cardheader border-dark mb-2 mt-1 ">
 							<div class="row">
-								<a href="/Showdata_controller" class="mx-auto d-block">Tìm số cực đẹp </a>
+								<a href="<?php base_url()?>index.php/Showdata_controller" class="mx-auto d-block">Tìm số cực đẹp </a>
 							</div>
 						</div>
 						<div class="card-body">
