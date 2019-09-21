@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$db['default'] = array(
+$db['default1'] = array(
 	'dsn'	=> '',
 	'hostname' => 'ec2-50-19-254-63.compute-1.amazonaws.com',
 	'username' => 'amlqpwlwnxburu',
@@ -95,7 +95,7 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-$db['default1'] = array(
+$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',

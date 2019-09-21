@@ -21,6 +21,28 @@ class ShowData_model extends CI_Model{
         return $this->db->delete('thongtin');
         
     }
+
+    public function editData_model($id){
+        $this->db->select('*');
+        $this->db->where('id',$id);
+
+        $temp = $this->db->get('thongtin');
+        $temp = $temp->result_array();
+        return $temp;
+    }
+
+    public function updateData_model($id,$email,$number,$price){
+        $array_update = array(
+            'id' => $id,
+            'email' => $email,
+            'number' => $number,
+            'price' => $price
+        );
+
+        $this->db->where('id',$id);
+        
+        return $this->db->update('thongtin',$array_update);
+    }
 }
 
 ?>

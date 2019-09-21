@@ -26,13 +26,13 @@ defined('BASEPATH') or exit('No script access allowed');
             <?php 
                 foreach($dataformcontroller as $key =>$value):
             ?>
-               <div class="col col-md-4 col-sm-6">
-                    <div class="card card-block m-2 p-2">
+               <div class="col-6 col-md-4 col-sm-6">
+                    <div class="card card-block m-2 p-2 py-3">
                         <h3 class="card-tittle ml-4">Số sim : <?php echo $value['number'] ?></h3>
-                        <p class="card-text ml-4">Giá tiền <?php echo $value['price'] ?></p>
-                        <div class="row">
+                        <p class="card-text ml-4 mb-4">Giá tiền <?php echo $value['price'] ?></p>
+                        <div class="row ">
                         <a href="<?php base_url() ?>showData_controller/delData_controller/<?=$value['id'] ?>"class="btn btn-primary mx-auto">Liên hệ</a>
-                        <a href="<?php base_url() ?>showData_controller/delData_controller/<?=$value['id'] ?>"class="btn btn-danger mx-auto">Sửa sim</a>
+                        <a href="<?php base_url() ?>showData_controller/editData_controller/<?=$value['id'] ?>"class="btn btn-danger mx-auto">Sửa sim</a>
                         </div>
                         
                         
